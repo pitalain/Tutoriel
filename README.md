@@ -19,7 +19,7 @@ import datetime
 
 Première manipulation
 
-Dans cet exemple, nous pouvoir voir comment obtenir la date et l'heure exacte à l'instant ou nous exécutons le code.
+Dans cet exemple, nous pouvoir voir comment obtenir la date, l'heure exacte ainsi que le fuseau horaire à l'instant ou nous exécutons le code.
 ```python
 asd = datetime.datetime.today()
 print(asd)
@@ -34,7 +34,8 @@ print(exple)
 ![01](https://github.com/pitalain/Tutoriel/assets/132237358/653d5a7f-45b8-45be-88c4-23f7b494fdc7)
 
 
-Comme on peut le voir la seule différence est avec les fonctions now() et today(). En utilisant la même syntaxe, ceci nous permet d'avoir le même résultat. 
+Comme on peut le voir la seule différence est avec les méthodes now() et today(). En utilisant la même syntaxe, ceci nous permet d'avoir le même résultat.
+En plus, la méthode today() récupère la date du jour à partir de l'horloge interne de l'ordinateur tandis que la méthode
 
 Pour la classe datetime, nous pouvons également afficher uniquement la date, l'heure, les minutes et les secondes.
 ```python
@@ -54,13 +55,16 @@ print(aff.minute)    # Minute
 print(aff.second)    # Seconde
 ```
 
-
+Formatage des dates 
+Il est possible également de formater les résultats. L'affichage de la date par-défaut s'effectue au format AAAA-MM-JJ, mais vous pouvez formater des heures et des dates comme vous les souhaitez. 
+Il existe une multitude de chaînes de format des dates et d'heures mais dans ce tutoriel, nous allons parcourir quelques unes d'entre elles. Vous pouvez consulter ce lien pour avoir la liste complète 
+http://www.python-simple.com/python-modules-autres/date-et-temps.php
 
 
 
 
 Affichage d'une date
-Dans ce cas, nous voyons comment affecter une date pour qu'il nous retourne notre choix. Nous spécifions alors les composantes suivantes année, mois, jour
+Dans ce cas, nous voyons comment affecter une date pour qu'il nous retourne notre choix. Nous spécifions alors les composantes suivantes année, mois, jour. Il est idéal quand nous n'avons pas à gérer des heures. 
 ```python
 #Demandons lui de nous afficher la date du 2024-2-11
 t = datetime.date(2024, 2, 1)
