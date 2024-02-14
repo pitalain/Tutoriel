@@ -36,6 +36,29 @@ print(exple)
 
 Comme on peut le voir la seule différence est avec les fonctions now() et today(). En utilisant la même syntaxe, ceci nous permet d'avoir le même résultat. 
 
+Pour la classe datetime, nous pouvons également afficher uniquement la date, l'heure, les minutes et les secondes.
+```python
+# Affectation de la date, l'heure, les minutes et les secondes
+aff = datetime.datetime(2019, 10, 7, 10, 9, 58)
+print(aff)
+```
+
+Ce code retournera le résultat: 2019-10-07 10:09:58. Mais il est possible d'exécuter le code en affichant uniquement le mois, l'année, la date, l'heure, les minutes ou les secondes
+```python
+#Affichage des composantes individuels des dates, d'heures, minutes
+print(aff.year)      # Année
+print(aff.month)     # Mois
+print(aff.day)       # Jour
+print(aff.hour)      # Heure
+print(aff.minute)    # Minute
+print(aff.second)    # Seconde
+```
+
+
+
+
+
+
 Affichage d'une date
 Dans ce cas, nous voyons comment affecter une date pour qu'il nous retourne notre choix. Nous spécifions alors les composantes suivantes année, mois, jour
 ```python
@@ -47,14 +70,20 @@ print(t)
 
 ![03](https://github.com/pitalain/Tutoriel/assets/132237358/89d76f8d-f468-4713-9bb3-0286ecf1a014)
 
-
-
-
-
-
 Nous voyons ici qu'on a utilisé la classe date pour avoir une date spécifique.
 
 Note: Pour le mois et le jour, assurons nous de ne pas marquer le chiffre 0 devant le deuxième chiffre.
-Par exemple, pour dire le mois de juillet: 7 et non 07.
-Pour le jour 7, mettre 7 au lieu de 07
+- Par exemple, pour dire le mois de juillet: 7 et non 07.
+- Pour le jour 7, mettre 7 au lieu de 07
+
+  Manipulation avec la classse time
+  Comme c'est le cas pour la date, nous pouvons afficher l'heure entière avec les composantes suivantes (heure, minutes et secondes)
+
+  ```python
+  # Affichage d'une heure spécifique avec tous ses détails
+  h = datetime.time(11, 19, 52)
+  print(h)
+```
+
+
 
