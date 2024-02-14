@@ -60,6 +60,16 @@ Il est possible également de formater les résultats. L'affichage de la date pa
 Il existe une multitude de chaînes de format des dates et d'heures mais dans ce tutoriel, nous allons parcourir quelques unes d'entre elles. Vous pouvez consulter ce lien pour avoir la liste complète 
 http://www.python-simple.com/python-modules-autres/date-et-temps.php
 
+Quand vous utilisez des chaînes de format, veillez à placer des espaces, des barres obliques et tout autre élément entre les directives à l'endroit ou vous souhaitez que ces signes apparaissent en sortie.
+
+#Affichage de la date en uttilisant le formatage
+```python
+print(f"{aff:%A, %d %B, %Y}")
+```
+
+Quand le code ci-dessus est exécuté, ce résultat est affiché en sortie: Monday, 07 October, 2019
+
+
 
 
 
