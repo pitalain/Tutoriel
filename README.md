@@ -208,6 +208,6 @@ Ce tutoriel a été une expérience extrêmement enrichissante pour moi, m'offra
 
 ## Références bibliographiques
 
-https://www.youtube.com/watch?v=GzhG26cvmNg&t=541s
-https://docs.python.org/fr/3.6/library/datetime.html#datetime-objects
-https://www.youtube.com/watch?v=r1Iv4d6CO2Q
+- https://www.youtube.com/watch?v=GzhG26cvmNg&t=541s
+- https://docs.python.org/fr/3.6/library/datetime.html#datetime-objects
+- https://www.youtube.com/watch?v=r1Iv4d6CO2Q
