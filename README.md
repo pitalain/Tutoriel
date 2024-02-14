@@ -195,7 +195,13 @@ Ce code accomplit la conversion d'une chaîne de caractères représentant une d
 
 ## Fuseaux horaires 
 
-Dans ce tutoriel, nous allons explorer le concpet des fuseaux horaires sans entrer en profondeur. Il existe l'objet datetime naif qui est pour toute date et heure qui ne comporte pas d'informations la reliant à un fuseau horaire spécifique et l'objet datetime avisé qui pour toute date et heure comprend des informations sur le fuseau horaire.
+Dans ce tutoriel, nous allons explorer le concpet des fuseaux horaires sans entrer en profondeur. Il existe l'objet datetime naif qui est pour toute date et heure qui ne comporte pas d'informations la reliant à un fuseau horaire spécifique et l'objet datetime avisé qui pour toute date et heure comprend des informations sur le fuseau horaire. Lorsqu' on récupère l'heure à partir de l'horloge, elle correspond à celle de votre 
+fuseau horaire, mais il n'y a aucune indication de quel fuseau horaire il s'agit. Vous pouvez cependant obtenir la différence entre votre fuseau et le temps UTC en comparant now(). 
+
+Cas de la détermination de la différence entre votre fuseau horaire et le temps UTC 
+
+
+Cas 
 
 
 ## Conclusion  
