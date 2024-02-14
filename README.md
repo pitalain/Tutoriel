@@ -58,7 +58,7 @@ print(aff.second)    # Seconde
 Formatage des dates 
 Il est possible également de formater les résultats. L'affichage de la date par-défaut s'effectue au format AAAA-MM-JJ, mais vous pouvez formater des heures et des dates comme vous les souhaitez. 
 Il existe une multitude de chaînes de format des dates et d'heures mais dans ce tutoriel, nous allons parcourir quelques unes d'entre elles. Vous pouvez consulter ce lien pour avoir la liste complète 
-http://www.python-simple.com/python-modules-autres/date-et-temps.php
+[Liste des chânes de formatage de date et d'heures] http://www.python-simple.com/python-modules-autres/date-et-temps.php
 
 Quand vous utilisez des chaînes de format, veillez à placer des espaces, des barres obliques et tout autre élément entre les directives à l'endroit ou vous souhaitez que ces signes apparaissent en sortie.
 
@@ -98,12 +98,11 @@ Note: Pour le mois et le jour, assurons nous de ne pas marquer le chiffre 0 deva
 - Pour le jour 7, mettre 7 au lieu de 07
 
   Manipulation avec la classse time
-  Comme c'est le cas pour la date, nous pouvons afficher l'heure entière avec les composantes suivantes (heure, minutes et secondes)
+  Comme c'est le cas pour la date, nous pouvons afficher l'heure entière avec les composantes suivantes (heure, minutes et secondes). Comme pour les dates, vous pouvez également faire le formatage
+  en l'affichant dans le format que vous voulez. Parfois, on veut travailler avvec des dates ou des heures. 
 
   ```python
   # Affichage d'une heure spécifique avec tous ses détails
-
-  
   h = datetime.time(11, 19, 52)
   print(h)
 ```
