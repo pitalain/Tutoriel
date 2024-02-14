@@ -81,9 +81,16 @@ Note: Pour le mois et le jour, assurons nous de ne pas marquer le chiffre 0 deva
 
   ```python
   # Affichage d'une heure spécifique avec tous ses détails
+
+  
   h = datetime.time(11, 19, 52)
   print(h)
 ```
 
 
 
+Références bibliographiques
+
+https://www.youtube.com/watch?v=GzhG26cvmNg&t=541s
+https://docs.python.org/fr/3.6/library/datetime.html#datetime-objects
+https://www.youtube.com/watch?v=r1Iv4d6CO2Q
