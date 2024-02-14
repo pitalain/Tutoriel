@@ -24,7 +24,37 @@ Dans cet exemple, nous pouvoir voir comment obtenir la date et l'heure exacte à
 asd = datetime.datetime.today()
 print(asd)
 ```
+![00](https://github.com/pitalain/Tutoriel/assets/132237358/f7d4a838-fdd5-49a3-9828-21e521da243c)
+
+Ceci est un autre exemple nous permettant de voir à travers un autre code pour avoir la date et l'heure exacte à l'instant ou nous exécutons le code 
+```python
+exple = datetime.datetime.now()
+print(exple)
+```
+![01](https://github.com/pitalain/Tutoriel/assets/132237358/653d5a7f-45b8-45be-88c4-23f7b494fdc7)
+
+
+Comme on peut le voir la seule différence est avec les fonctions now() et today(). En utilisant la même syntaxe, ceci nous permet d'avoir le même résultat. 
+
+Affichage d'une date
+Dans ce cas, nous voyons comment affecter une date pour qu'il nous retourne notre choix. Nous spécifions alors les composantes suivantes année, mois, jour
+```python
+#Demandons lui de nous afficher la date du 2024-2-11
+t = datetime.date(2024, 2, 1)
+print(t)
+```
+![02](https://github.com/pitalain/Tutoriel/assets/132237358/cf8345f9-7423-4bd8-9a37-ec0ed3d3784b)
+
+![03](https://github.com/pitalain/Tutoriel/assets/132237358/89d76f8d-f468-4713-9bb3-0286ecf1a014)
 
 
 
+
+
+
+Nous voyons ici qu'on a utilisé la classe date pour avoir une date spécifique.
+
+Note: Pour le mois et le jour, assurons nous de ne pas marquer le chiffre 0 devant le deuxième chiffre.
+Par exemple, pour dire le mois de juillet: 7 et non 07.
+Pour le jour 7, mettre 7 au lieu de 07
 
