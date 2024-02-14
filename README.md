@@ -17,7 +17,7 @@ Il Permet de créer des objets qui vont représenter le temps avec les heures, l
 import datetime
 ```
 
-Première manipulation
+## Première manipulation avec datetime
 
 Dans cet exemple, nous pouvoir voir comment obtenir la date, l'heure exacte ainsi que le fuseau horaire à l'instant ou nous exécutons le code.
 ```python
@@ -55,10 +55,12 @@ print(aff.minute)    # Minute
 print(aff.second)    # Seconde
 ```
 
-Formatage des dates 
+## Formatage des dates 
+
 Il est possible également de formater les résultats. L'affichage de la date par-défaut s'effectue au format AAAA-MM-JJ, mais vous pouvez formater des heures et des dates comme vous les souhaitez. 
 Il existe une multitude de chaînes de format des dates et d'heures mais dans ce tutoriel, nous allons parcourir quelques unes d'entre elles. Vous pouvez consulter ce lien pour avoir la liste complète 
-[Liste des chânes de formatage de date et d'heures] http://www.python-simple.com/python-modules-autres/date-et-temps.php
+[Liste des chânes de formatage de date et d'heures] http://www.python-simple.com/python-modules-autres/date-et-temps.php 
+Nous pouvons se pratiquer avec ce lien sur les dates et les heures également
 
 Quand vous utilisez des chaînes de format, veillez à placer des espaces, des barres obliques et tout autre élément entre les directives à l'endroit ou vous souhaitez que ces signes apparaissent en sortie.
 
@@ -80,7 +82,8 @@ Après instruction, nous aurons ce résultat en sortie: 07/10/2019
 
 
 
-Affichage d'une date
+## Affichage d'une date
+
 Dans ce cas, nous voyons comment affecter une date pour qu'il nous retourne notre choix. Nous spécifions alors les composantes suivantes année, mois, jour. Il est idéal quand nous n'avons pas à gérer des heures. 
 ```python
 #Demandons lui de nous afficher la date du 2024-2-11
@@ -97,7 +100,8 @@ Note: Pour le mois et le jour, assurons nous de ne pas marquer le chiffre 0 deva
 - Par exemple, pour dire le mois de juillet: 7 et non 07.
 - Pour le jour 7, mettre 7 au lieu de 07
 
-  Manipulation avec la classse time
+ ## Manipulation avec la classse time
+ 
   Comme c'est le cas pour la date, nous pouvons afficher l'heure entière avec les composantes suivantes (heure, minutes et secondes). Comme pour les dates, vous pouvez également faire le formatage
   en l'affichant dans le format que vous voulez. Parfois, on veut travailler avvec des dates ou des heures. 
 
