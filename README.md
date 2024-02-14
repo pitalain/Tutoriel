@@ -69,6 +69,13 @@ print(f"{aff:%A, %d %B, %Y}")
 
 Quand le code ci-dessus est exécuté, ce résultat est affiché en sortie: Monday, 07 October, 2019
 
+Pour afficher la date au format JJ/MM/AAAA, utilisez %d%m%Y, de la manière suivante: 
+```python
+#Affichage de la date au format JJ/MM/AAAA
+exple = f"{aff:%d/%m/%Y}"
+print(exple)
+```
+
 
 
 
