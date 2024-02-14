@@ -1,5 +1,5 @@
 
-# Tutoriel: Qu'est-ce que le format datetime : pourquoi et comment l'utiliser ?
+# Tutoriel: Qu'est-ce que le format datetime : pourquoi et comment l'utiliser?
 
 ## Introduction 
 Comme tout langage en programmation, Python intègre le module datetime, indispensable dans de nombreux projets et structures organisationnelles pour la gestion précise des dates d'échéance et d'enregistrement. Contrairement à certains types de données intégrés, tels que les nombres, Python ne propose pas de structure native pour les dates, d'où l'importance du module datetime pour manipuler efficacement ces informations. Ce module fournit une classe de base abstraite qui offre une gamme de types de données pour les heures et les dates, permettant ainsi une flexibilité et une précision accrues dans la programmation. Dans des contextes de projets complexes, où la gestion du temps est cruciale, le module datetime devient un outil incontournable, facilitant la manipulation et le traitement des informations temporelles. Grâce à cette fonctionnalité, les développeurs peuvent structurer leurs applications de manière plus robuste et efficace, améliorant ainsi la qualité et la fiabilité de leurs logiciels. En somme, l'intégration du module datetime dans Python renforce sa polyvalence et sa pertinence dans une variété de contextes de développement logiciel.
