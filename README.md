@@ -76,7 +76,7 @@ exple = f"{aff:%d/%m/%Y}"
 print(exple)
 ```
 
-
+Après instruction, nous aurons ce résultat en sortie: 07/10/2019
 
 
 
