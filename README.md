@@ -64,8 +64,8 @@ Nous pouvons se pratiquer avec ce lien sur les dates et les heures également
 
 Quand vous utilisez des chaînes de format, veillez à placer des espaces, des barres obliques et tout autre élément entre les directives à l'endroit ou vous souhaitez que ces signes apparaissent en sortie.
 
-#Affichage de la date en uttilisant le formatage
 ```python
+#Affichage de la date en uttilisant le formatage
 print(f"{aff:%A, %d %B, %Y}")
 ```
 
@@ -80,7 +80,13 @@ print(exple)
 
 Après instruction, nous aurons ce résultat en sortie: 07/10/2019
 
-
+Il est également possible d'afficher les dates dans un autre formatage de date. Dans le code ci-dessous, nous voyons que le module datetime offre des méthodes pour formater les objets datetime 
+en chaînes de caractères :
+```python
+# Formater un objet datetime en chaîne de caractères
+print(dt.strftime("%Y-%m-%d %H:%M:%S"))  # Format personnalisé
+print(dt.isoformat())                     # Format avec la norme
+```
 
 ## Affichage d'une date
 
@@ -100,7 +106,7 @@ Note: Pour le mois et le jour, assurons nous de ne pas marquer le chiffre 0 deva
 - Par exemple, pour dire le mois de juillet: 7 et non 07.
 - Pour le jour 7, mettre 7 au lieu de 07
 
- ## Manipulation avec la classse time
+ ## Manipulation des heures
  
   Comme c'est le cas pour la date, nous pouvons afficher l'heure entière avec les composantes suivantes (heure, minutes et secondes). Comme pour les dates, vous pouvez également faire le formatage
   en l'affichant dans le format que vous voulez. Parfois, on veut travailler avvec des dates ou des heures. 
@@ -111,6 +117,65 @@ Note: Pour le mois et le jour, assurons nous de ne pas marquer le chiffre 0 deva
   print(h)
 ```
 
+## Calcul avec les dates en durée 
+
+Pour tout projet dans le monde des affaires, la date et les heures ne nous donne pas des informations pertinentes. Nous avons besoin de faire des calculs pour savoir un intervalle de temps ou une durée.
+Pour les durées, le module Python datetime datetime comprend la classe datetime.timedelta.
+
+Un objet timedelta est crée automatiquement lorsqu'on soustrait deux dates, deux heures afin de déterminer la durée entre les deux données. Par exemple, dans ce cas, stockons le jour de l'an et la date du jour.  On doit créer trois variables pour pouvoir stocker la différence qu'on obtient en soustrayant la date la plus ancienne à la date la plus récente.
+
+Insertion de timedelta
+
+ ```python
+# Importation de la classe timedelta
+from datetime import timedelta
+```
+
+  ```python
+#Calcul de différence de date
+jour_an = datetime.date(2024,1,1)
+annif = datetime.date(2024,10,10)
+intervalle  = annif - jour_an
+print(intervalle)
+```
+En exécutant le code on obtient en sortie: 283 days.
+Il y'a 283 jours entre ces deux dates et nous n'avons pas spécifié d'heures de jour dans ces date, elles sont simplement initialisés à 0. Le calcul de timedelta est généré automatiquement lorsqu'on soustrait une date 
+à une autre pour obtenir la durée entre ces deux dates.
+
+## Exercice récapitulatif 
+
+Dans l'exemple ci-dessous un cas complet ou on calcule l'âge en années et en mois à partir d'un timedelta.
+
+  ```python
+#Calcul de l'âge en années et en mois
+#c'est la date du jour que donne l'ordinateur
+auj = datetime.date.today()
+#date de naissance exprimée en année, mois, jour
+date_naissance = datetime.date(2000,11,5)
+#durée entr les deux dates sous la formne d'un objet timedelta'
+age = auj - date_naissance
+#durée entre les deux dates exprimé en jours
+jours = age.days
+#déterminons le nombre d'années
+annees = jours // 365
+#Le nombre de jours restant est le modulo de la division par 365
+#En divisant le nombre par 30, on obtient un nombre de mois approximatif
+mois = (jours % 365) // 30
+#Affichage du résultat
+print(f"Vous êtes agé de  {annees} ans et {mois} mois")
+```
+Comme sortie, elle nous retourne: Vous êtes agé de  23 ans et 3 mois
+
+## Utilisation d'une fonction
+
+  ```python
+def calculate_age(birth_date):
+    today = datetime.date.today()
+    age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+    return age
+```
+
+La fonction calculate_age détermine l'âge d'une personne en fonction de sa date de naissance. Elle prend en argument la date de naissance au format date. En se basant sur la date actuelle obtenue avec datetime.date.today(), elle compare les années et les mois/jours de naissance pour savoir si l'anniversaire est déjà passé cette année. Puis, elle soustrait l'année de naissance de l'année actuelle, ajustant si nécessaire si l'anniversaire n'est pas encore survenu. Enfin, elle renvoie l'âge calculé en années.
 
 
 Références bibliographiques
