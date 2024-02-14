@@ -173,12 +173,28 @@ def calculate_age(birth_date):
     today = datetime.date.today()
     age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
     return age
-```
 
+birth_date = datetime.date(1990, 5, 17)
+print("Age:", calculate_age(birth_date))
+```
+En sortie, nous avons comme résultat: Age: 33 ans 
+ 
 La fonction calculate_age détermine l'âge d'une personne en fonction de sa date de naissance. Elle prend en argument la date de naissance au format date. En se basant sur la date actuelle obtenue avec datetime.date.today(), elle compare les années et les mois/jours de naissance pour savoir si l'anniversaire est déjà passé cette année. Puis, elle soustrait l'année de naissance de l'année actuelle, ajustant si nécessaire si l'anniversaire n'est pas encore survenu. Enfin, elle renvoie l'âge calculé en années.
 
+## Conversion de chaînes de caractères en objets datetime
 
-Références bibliographiques
+  ```python
+# Conversion de chaînes de caractères en objets datetime
+date_s = "2024-02-12"
+pd = datetime.datetime.strptime(date_s, "%Y-%m-%d")
+print(pd)
+```
+En sortie, on a le résultat: 2024-02-12 00:00:00
+
+Ce code accomplit la conversion d'une chaîne de caractères représentant une date au format "YYYY-MM-DD" en un objet datetime. Initialement, une variable date_str est définie, contenant la date "2023-12-25". Ensuite, la méthode strptime() de la classe datetime.datetime est invoquée, permettant la transformation de cette chaîne en un objet datetime. Le format spécifié dans la méthode est "%Y-%m-%d", correspondant à l'année, au mois et au jour respectivement. Le résultat de cette opération est assigné à la variable parsed_date. Pour finir, la date convertie est affichée à l'aide de la fonction print(). Par conséquent, ce code offre la possibilité de convertir une chaîne de caractères dépeignant une date en un objet datetime, qui se prête ensuite à diverses manipulations ou utilisations dans des opérations de date et d'heure ultérieures.
+
+
+## Références bibliographiques
 
 https://www.youtube.com/watch?v=GzhG26cvmNg&t=541s
 https://docs.python.org/fr/3.6/library/datetime.html#datetime-objects
