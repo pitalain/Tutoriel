@@ -197,13 +197,40 @@ Ce code accomplit la conversion d'une chaîne de caractères représentant une d
 Dans ce tutoriel, nous allons explorer le concpet des fuseaux horaires sans entrer en profondeur. 
 Il existe deux tpes d'objets datetime. L'objet datetime naif qui est pour toute date et heure qui ne comporte pas d'informations la reliant à un fuseau horaire spécifique et l'objet datetime avisé qui pour toute date et heure comprend des informations sur le fuseau horaire. Lorsqu' on récupère l'heure à partir de l'horloge, elle correspond à celle de votre 
 fuseau horaire, mais il n'y a aucune indication de quel fuseau horaire il s'agit. Vous pouvez cependant obtenir la différence entre votre fuseau et le temps UTC en comparant now(). 
-Bien que le module datetime ne supporte pas nativement la gestion des fuseaux horaires, le module pytz offre cette fonctionnalité supplémentaire. Pour illustrer, voici un exemple qui démontre la création d'un objet datetime en spécifiant un fuseau horaire. En utilisant pytz, il devient possible d'instancier un objet datetime avec une référence à un fuseau horaire précis, permettant ainsi une manipulation précise des dates et heures dans différents contextes temporels. Ils utilisent une base de donnees appelles tz database https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. C'est une base de données universelle qui permet de representer différents fuseaux horaire dans le monde. 
+Bien que le module datetime ne supporte pas nativement la gestion des fuseaux horaires, le module pytz offre cette fonctionnalité supplémentaire. Pour illustrer, voici un exemple qui démontre la création d'un objet datetime en spécifiant un fuseau horaire. En utilisant pytz, il devient possible d'instancier un objet datetime avec une référence à un fuseau horaire précis, permettant ainsi une manipulation précise des dates et heures dans différents contextes temporels. Ils utilisent une base de donnees appelles tz database [Base de données tz](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). C'est une base de données universelle qui permet de representer différents fuseaux horaire dans le monde. 
 
+Ci-joint un exercice récapitulatif des fuseaux horaires
+
+  ```python
+#Cas récapitulatif des fuseaux horaires
+#on réimporte le module pour une facilitation du code
+from datetime import datetime
+#création d'un objet datetime now
+now = datetime.now()
+#On peut afficher les informations du fuseau horaire avec l'attribut tzinfo qui est un raccourci pour le fuseau horaire'
+now.tzinfo
+#En affichant le now.tzinfo cela ne me retourne rien et pour avoir un résultat il faut l'afficher avec un print
+print(now.tzinfo)
+#Il nous retourne en sortie None ce qui veut dire qu'on n'a pas d('informations sur le fuseau horaire '
+#Pour avoir des informations sur le fuseau horaire on peut importer la classe zoneinfo
+from zoneinfo import ZoneInfo
+#Affichons ici le fuseau horaire de New York
+f_v = datetime.now(tz=ZoneInfo("America/New_York"))
+print(("L'heure actuelle de New York: ", f_v))
+#Affichage du fuseau horaire sous un format de chaine formatée
+print(f"UTC offset de New York: {f_v.utcoffset()}")
+#Vous pourriez rencontrer des problèmes d'exécution de Python inférieure à 3.9
+# Obtention de la date et l'heure actuelles dans le fuseau horaire de Los Angeles
+fus_losAnge = datetime.now(tz=ZoneInfo("America/Los_Angeles"))
+print("Heure actuelle à Los Angeles:", fus_losAnge)
+# Calcul de la différence entre les deux fuseaux horaires de New York et de Los Angeles
+diff_result = f_v - fus_losAnge
+print("La différence de temps entre New York et Los Angeles est de:", diff_result)
+```
 
 ## Conclusion  
 
 Ce tutoriel a été une expérience extrêmement enrichissante pour moi, m'offrant une compréhension étendue du langage Python à travers une diversité de domaines. En mettant l'accent sur le module datetime, il a permis une exploration approfondie de cet outil crucial, essentiel dans l'analyse des données d'entreprise. Il a clairement mis en évidence l'importance vitale des dates dans ces analyses, soulignant la nécessité absolue de maîtriser les multiples facettes de leur manipulation pour exécuter diverses tâches avec exactitude. Ce tutoriel m'a permis d'acquérir des compétences pratiques et théoriques dans la gestion des dates, renforçant ainsi ma capacité à travailler efficacement dans des projets Python impliquant des aspects temporels. Bref, en comprenant les concepts de base et en explorant ses fonctionnalités avancées, nous pouvons gérer efficacement les aspects temporels de vos applications Python. 
-
 
 
 
