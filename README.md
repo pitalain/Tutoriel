@@ -57,9 +57,9 @@ print(aff.second)    # Seconde
 ## Formatage des dates 
 
 Il est possible également de formater les résultats. L'affichage de la date par-défaut s'effectue au format AAAA-MM-JJ, mais vous pouvez formater des heures et des dates comme vous les souhaitez. 
-Il existe une multitude de chaînes de format des dates et d'heures mais dans ce tutoriel, nous allons parcourir quelques unes d'entre elles. Vous pouvez consulter ce lien pour avoir la liste complète 
-[Liste des chânes de formatage de date et d'heures] http://www.python-simple.com/python-modules-autres/date-et-temps.php 
-Nous pouvons se pratiquer avec ce lien sur les dates et les heures également
+Il existe une multitude de chaînes de format des dates et d'heures mais dans ce tutoriel, nous allons parcourir quelques unes d'entre elles. Vous pouvez consulter ce lien pour avoir la liste complète: 
+[Liste des chânes de formatage de date et d'heures](http://www.python-simple.com/python-modules-autres/date-et-temps.php)
+Nous pouvons se pratiquer avec ce lien sur les dates et les heures également.
 
 Quand vous utilisez des chaînes de format, veillez à placer des espaces, des barres obliques et tout autre élément entre les directives à l'endroit ou vous souhaitez que ces signes apparaissent en sortie.
 
@@ -194,9 +194,10 @@ Ce code accomplit la conversion d'une chaîne de caractères représentant une d
 
 ## Fuseaux horaires 
 
-Dans ce tutoriel, nous allons explorer le concpet des fuseaux horaires sans entrer en profondeur. Il existe l'objet datetime naif qui est pour toute date et heure qui ne comporte pas d'informations la reliant à un fuseau horaire spécifique et l'objet datetime avisé qui pour toute date et heure comprend des informations sur le fuseau horaire. Lorsqu' on récupère l'heure à partir de l'horloge, elle correspond à celle de votre 
+Dans ce tutoriel, nous allons explorer le concpet des fuseaux horaires sans entrer en profondeur. 
+Il existe deux tpes d'objets datetime. L'objet datetime naif qui est pour toute date et heure qui ne comporte pas d'informations la reliant à un fuseau horaire spécifique et l'objet datetime avisé qui pour toute date et heure comprend des informations sur le fuseau horaire. Lorsqu' on récupère l'heure à partir de l'horloge, elle correspond à celle de votre 
 fuseau horaire, mais il n'y a aucune indication de quel fuseau horaire il s'agit. Vous pouvez cependant obtenir la différence entre votre fuseau et le temps UTC en comparant now(). 
-Bien que le module datetime ne supporte pas nativement la gestion des fuseaux horaires, le module pytz offre cette fonctionnalité supplémentaire. Pour illustrer, voici un exemple qui démontre la création d'un objet datetime en spécifiant un fuseau horaire. En utilisant pytz, il devient possible d'instancier un objet datetime avec une référence à un fuseau horaire précis, permettant ainsi une manipulation précise des dates et heures dans différents contextes temporels.
+Bien que le module datetime ne supporte pas nativement la gestion des fuseaux horaires, le module pytz offre cette fonctionnalité supplémentaire. Pour illustrer, voici un exemple qui démontre la création d'un objet datetime en spécifiant un fuseau horaire. En utilisant pytz, il devient possible d'instancier un objet datetime avec une référence à un fuseau horaire précis, permettant ainsi une manipulation précise des dates et heures dans différents contextes temporels. Ils utilisent une base de donnees appelles tz database https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. C'est une base de données universelle qui permet de representer différents fuseaux horaire dans le monde. 
 
 
 ## Conclusion  
