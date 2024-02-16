@@ -1,4 +1,4 @@
-# Nom du fichier : demo001
+# Nom du fichier : datetime
 # Auteur : aiea2001@usherbrooke.ca
 # Date de création : 20240214
 # Description : Tutoriel sur le module datetime
@@ -102,4 +102,28 @@ date_s = "2024-02-12"
 pd = datetime.datetime.strptime(date_s, "%Y-%m-%d")
 print(pd)
 
+#Cas récapitulatif des fuseaux horaires
+#on réimporte le module pour une facilitation du code
+from datetime import datetime
+#création d'un objet datetime now
+now = datetime.now()
+#On peut afficher les informations du fuseau horaire avec l'attribut tzinfo qui est un raccourci pour le fuseau horaire'
+now.tzinfo
+#En affichant le now.tzinfo cela ne me retourne rien et pour avoir un résultat il faut l'afficher avec un print
+print(now.tzinfo)
+#Il nous retourne en sortie None ce qui veut dire qu'on n'a pas d('informations sur le fuseau horaire '
+#Pour avoir des informations sur le fuseau horaire on peut importer la classe zoneinfo
+from zoneinfo import ZoneInfo
+#Affichons ici le fuseau horaire de New York
+f_v = datetime.now(tz=ZoneInfo("America/New_York"))
+print(("L'heure actuelle de New York: ", f_v))
+#Affichage du fuseau horaire sous un format de chaine formatée
+print(f"UTC offset de New York: {f_v.utcoffset()}")
+#Vous pourriez rencontrer des problèmes d'exécution de Python inférieure à 3.9
+# Obtention de la date et l'heure actuelles dans le fuseau horaire de Los Angeles
+fus_losAnge = datetime.now(tz=ZoneInfo("America/Los_Angeles"))
+print("Heure actuelle à Los Angeles:", fus_losAnge)
+# Calcul de la différence entre les deux fuseaux horaires de New York et de Los Angeles
+diff_result = f_v - fus_losAnge
+print("La différence de temps entre New York et Los Angeles est de:", diff_result)
 
