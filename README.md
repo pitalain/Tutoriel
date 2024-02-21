@@ -231,6 +231,12 @@ print("Heure actuelle à Los Angeles:", fus_losAnge)
 diff_result = f_v - fus_losAnge
 print("La différence de temps entre New York et Los Angeles est de:", diff_result)
 ```
+## Limites et prochaines étapes
+Ce tutoriel aborde les principes fondamentaux de DateTime, mais n'explique pas les fonctionnalités avancées ou les cas d'utilisation complexes. Il pourrait manquer d'exemples pratiques où la manipulation de dates est essentielle, comme dans l'analyse financière ou météorologique. Les étapes suivantes impliquent une meilleure compréhension de la gestion des fuseaux horaires, la manipulation de formats de date personnalisés, et l'adoption de bonnes pratiques pour garantir la sécurité des applications traitant des données temporelles. Ces notions pourront être abordées et sont utiles pour des projets en gestion.
+
+## Transfert des connaissances
+
+Ce module datetime permet de concevoir une application permettant à l'utilisateur de planifier des événements dans un calendrier. Ce même module peut également être employé pour calculer des délais et des échéances dans divers contextes, tels que la gestion de projet ou la planification de tâches, incluant des fonctionnalités telles que le calcul du nombre de jours avant une date d'échéance donnée. En outre, le module datetime offre des capacités pour gérer les conversions entre différents fuseaux horaires. En démontrant ces fonctionnalités dans divers scénarios, vous pouvez aider à illustrer de manière efficace la polyvalence et l'application pratique du module datetime, facilitant ainsi une meilleure compréhension de son utilisation et de son fonctionnement.
 
 ## Conclusion  
 
